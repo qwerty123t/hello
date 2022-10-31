@@ -252,6 +252,7 @@
 		}
 	</style>
 
+	<link as="image" rel="preload" href="./media/poster.webp" fetchpriority="high">
 	<link rel="preload" href="fonts/Hero-New-Bold-subset.woff2" as="font" type="font/woff2" crossorigin>
 	<link rel="preload" href="fonts/Hero-New-Medium-subset.woff2" as="font" type="font/woff2" crossorigin>
 	<link rel="preload" href="fonts/Hero-New-Regular-subset.woff2" as="font" type="font/woff2" crossorigin>
@@ -263,18 +264,12 @@
 	<script defer src="minified/squircle.min.js"></script> <!-- закругления супперэллипсов -->
 	<script defer src="minified/pivot.min.js"></script> <!-- Библиотнека наклонов постеров -->
 	<script defer src="minified/s27__3dPosters.min.js"></script> <!-- 3д парраллакс постеры -->
+	<script defer src="minified/motion.min.js"></script> <!-- анимация скрытия прелоадера и смена цвета фона -->
 
 	<script defer src="minified/s4__horizont.min.js"></script> <!-- GSAP S4 горизонтальный скролл -->
 	<script defer src="minified/Draggable.min.js"></script> <!-- GSAP S8 драггинг для слайдера -->
 	<script defer src="minified/InertiaPlugin.min.js"></script> <!-- GSAP S8 инерция для слайдера -->
 	<script defer src="minified/s8__slider.min.js"></script> <!-- GSAP S8 анимация для слайдера -->
-	<script defer src="minified/faq.min.js"></script> <!-- WAAPI анимация для FAQ -->
-	
-	<script defer src="minified/gradient.min.js"></script> <!-- градиент футер -->
-	<script defer src="minified/zoomAnimation.min.js"></script> <!-- анимация зума при клике на альт -->
-
-	<script defer src="minified/motion.min.js"></script> <!-- анимация зума при клике на альт -->
-
 
 
 </head>
@@ -330,7 +325,7 @@
 			</header>
 
 			<div class="s1__wrapper">
-				<video class="s1__video" autoplay muted loop playsinline poster="media/poster.webp">
+				<video class="s1__video" autoplay muted loop playsinline poster="./media/poster.webp">
 					<source src="./media/720.mp4" type="video/mp4">
 					<!-- <source src="./media/KIONAV1.mp4" type="video/mp4; codecs=av01.0.08M.08">
 					<source src="./media/KIONVP9.webm" type="video/webm; codecs=vp9">
@@ -1254,5 +1249,11 @@
 
 	<focus-zoom></focus-zoom>
 </body>
+<script defer src="minified/faq.min.js"></script> <!-- WAAPI анимация для FAQ -->
+	
+<script defer src="minified/gradient.min.js"></script> <!-- градиент футер -->
+<script defer src="minified/zoomAnimation.min.js"></script> <!-- анимация зума при клике на альт -->
+
+
 
 </html>
