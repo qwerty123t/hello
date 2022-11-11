@@ -27,7 +27,7 @@ animate(".header",
 )
 animate(".s1__wrapper", 
 	{ 
-		transform: "scale(1)",
+		transform: ["scale(0.4)", "scale(1)"],
 	},
 	{ 
 		duration: 1,

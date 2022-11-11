@@ -265,7 +265,9 @@
 		align-items: center;
 		justify-content: flex-end;
 		position: relative;
-		height: 160vw; /* 512px */
+		// height: 160vw; /* 512px */
+		height: calc(100vh - 24vw);
+		height: calc(100svh - 24vw);
 		width: 87.5vw;
 		margin: 0 auto;
 		background-color: black;
@@ -274,7 +276,9 @@
 		--squircle-radius: 10px;
 		mask-image: paint(squircle);
 		will-change: transform;
-		transform: scale(0.4);
+		// transform: scale(0.4);
+
+		// нужно сделать другой плавный радиус для пк
 	}
 
 
@@ -293,10 +297,9 @@
 		background-size: cover;
 		background-position: center;
 		filter: brightness(0.7);
-		--squircle-smooth: 0.8;
-		--squircle-radius: 10px;
-		mask-image: paint(squircle);
-		will-change: transform;
+		// --squircle-smooth: 0.8;
+		// --squircle-radius: 10px;
+		// mask-image: paint(squircle);
 
 		source { 
 			object-fit: cover;
@@ -723,6 +726,7 @@
 		}
 
 		&--text {
+			color: black;
 			width: 87.5vw;
 			margin-top: 9.0625vw; /* 29px */
 			text-align: center;

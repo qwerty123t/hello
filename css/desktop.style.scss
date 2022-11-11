@@ -412,7 +412,7 @@ https://learnui.design/tools/gradient-generator.html
 	
 		&__wrapper {
 			width: 89.453125vw;
-			height: 51.8554688vw;
+			height: calc(100vh - 8vw);
 			border-radius: 3.25520833vw;
 		}
 		
