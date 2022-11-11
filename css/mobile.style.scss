@@ -272,13 +272,10 @@
 		margin: 0 auto;
 		background-color: black;
 		border-radius: 12.5vw;
-		--squircle-smooth: 0.8;
-		--squircle-radius: 10px;
-		mask-image: paint(squircle);
 		will-change: transform;
-		// transform: scale(0.4);
-
-		// нужно сделать другой плавный радиус для пк
+		--smooth-corners: 9, 19;
+		mask-image: paint(smooth-corners);
+		-webkit-mask-image: paint(smooth-corners);
 	}
 
 
@@ -297,9 +294,6 @@
 		background-size: cover;
 		background-position: center;
 		filter: brightness(0.7);
-		// --squircle-smooth: 0.8;
-		// --squircle-radius: 10px;
-		// mask-image: paint(squircle);
 
 		source { 
 			object-fit: cover;
@@ -748,9 +742,6 @@
 			height: 107.178125vw; /* 107.178125vw */
 			border-radius: 2vw;
 			margin-top: 12.5vw; /* 40px */
-			// --squircle-smooth: 0.8;
-			// --squircle-radius: 10px;
-			// mask-image: paint(squircle);
 			object-fit: cover;
 
 			.scene {
@@ -867,9 +858,6 @@ _::-webkit-full-page-media, _:future, :root .overlay2 svg {
 			width: 42.8125vw;
 			object-fit: cover;
 			border-radius: 1.25vw; /* 4px */
-			--squircle-smooth: 0.8;
-			--squircle-radius: 4px;
-			mask-image: paint(squircle);
 
 			img { 
 				transition: all 0.3s ease;

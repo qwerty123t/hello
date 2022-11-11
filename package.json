@@ -21,7 +21,8 @@
     "granim": "^2.0.0",
     "gsap": "^3.11.3",
     "motion": "^10.14.3",
-    "parallax-js": "^3.1.0"
+    "parallax-js": "^3.1.0",
+    "smooth-corners": "^1.0.8"
   },
   "devDependencies": {
     "postcss-scss": "^4.0.5",
