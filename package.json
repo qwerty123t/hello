@@ -26,7 +26,6 @@
   },
   "devDependencies": {
     "postcss-scss": "^4.0.5",
-    "stylelint": "^14.14.1",
-    "stylelint-config-standard": "^29.0.0"
+    "rome": "^10.0.1"
   }
 }
