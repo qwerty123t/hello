@@ -48,8 +48,8 @@
 	  var transitionTimingProp            = getProp(['transitionTimingFunction', 'webkitTransitionTimingFunction', 'mozTransitionTimingFunction']);
   
 	  if (config.perspective && typeof config.perspective === 'number') {
-		container.style[perspectiveProp]  = config.perspective + 'px';
-		target.style[perspectiveProp]     = config.perspective + 'px';
+		container.style[perspectiveProp]  = `${config.perspective}px`;
+		target.style[perspectiveProp]     = `${config.perspective}px`;
   
 	  } else {
 		container.style[perspectiveProp]  = '1000px';
@@ -154,7 +154,7 @@
 		for (; p > q; q++) {
 		  if (!config.shadow || target.children[q].className !== _shadow.className) {
 			if (!config.shine || target.children[q].className !== _shine.className) {
-			  target.children[q].style[transformProp] = 'translateZ(' + config.child3D + 'px)';
+			  target.children[q].style[transformProp] = `translateZ(${config.child3D}px)`;
 			}
 		  }
 		}
@@ -162,16 +162,16 @@
   
 	  function enter () {
 		if (config.hoverClass && config.hoverInClass) {
-		  target.className += ' ' + config.hoverClass + ' ' + config.hoverInClass;
+		  target.className += ` ${config.hoverClass} ${config.hoverInClass}`;
 		  setTimeout(function () {
 			target.className = removeClass(target.className, config.hoverInClass);
 		  }, 1000);
   
 		} else if (config.hoverClass) {
-		  target.className += ' ' + config.hoverClass;
+		  target.className += ` ${config.hoverClass}`;
   
 		} else if (config.hoverInClass) {
-		  target.className += ' ' + config.hoverInClass;
+		  target.className += ` ${config.hoverInClass}`;
 		  setTimeout(function () {
 			target.className = removeClass(target.className, config.hoverInClass);
 		  }, 1000);
@@ -193,10 +193,10 @@
 		var angle  = ang < 0 ? ang + 360 : ang;
   
 		if (config.scale) {
-		  target.style[transformProp] = 'rotateY(' + ax + 'deg) rotateX(' + ay + 'deg) scale3d(1.15, 1.15, 1.15)';
+		  target.style[transformProp] = `rotateY(${ax}deg) rotateX(${ay}deg) scale3d(1.15, 1.15, 1.15)`;
   
 		} else {
-		  target.style[transformProp] = 'rotateY(' + ax + 'deg) rotateX(' + ay + 'deg)';
+		  target.style[transformProp] = `rotateY(${ax}deg) rotateX(${ay}deg)`;
 		}
   
 		if (config.shadow) {
@@ -205,7 +205,7 @@
   
 		if (config.shine) {
 		  _shine.style.opacity         = 1;
-		  _shine.style.backgroundImage = 'linear-gradient(' + angle + 'deg, rgba(230, 230, 230, ' + oy / h * 0.5 +') 0%, transparent 80%)';
+		  _shine.style.backgroundImage = `linear-gradient(${angle}deg, rgba(230, 230, 230, ${oy / h * 0.5}) 0%, transparent 80%)`;
 		}
 	  }
   
@@ -223,7 +223,7 @@
 		}
   
 		if (config.hoverClass && config.hoverOutClass) {
-		  target.className += ' ' + config.hoverOutClass;
+		  target.className += ` ${config.hoverOutClass}`;
 		  target.className = removeClass(target.className, config.hoverClass);
 		  setTimeout(function () {
 			target.className = removeClass(target.className, config.hoverOutClass);
@@ -233,7 +233,7 @@
 		  target.className = removeClass(target.className, config.hoverClass);
   
 		} else if (config.hoverOutClass) {
-		  target.className += ' ' + config.hoverOutClass;
+		  target.className += ` ${config.hoverOutClass}`;
 		  setTimeout(function () {
 			target.className = removeClass(target.className, config.hoverOutClass);
 		  }, 1000);
@@ -247,12 +247,12 @@
 		});
   
 		container.addEventListener('touchmove', function (e) {
-		  if (!!_prevent_scroll) { e.preventDefault(); }
+		  if (_prevent_scroll) { e.preventDefault(); }
 		  return move(e);
 		});
   
 		container.addEventListener('touchend', function () {
-		  if (!!_prevent_scroll) { win.preventScroll = false; }
+		  if (_prevent_scroll) { win.preventScroll = false; }
 		  return leave();
 		});
   
@@ -290,13 +290,13 @@
 		return '0.2s';
   
 	  } else if (t > 1 && t <= 50) {
-		return '0.' + t + 's';
+		return `0.${t}s`;
   
 	  } else if (t > 50) {
-		return t + 'ms';
+		return `${t}ms`;
   
 	  } else {
-		return t + 's';
+		return `${t}s`;
 	  }
 	}
   
@@ -310,7 +310,7 @@
 	  } else if (tfl === 4) {
   
 		if (typeof tf[0] === 'number' && typeof tf[1] === 'number' && typeof tf[2] === 'number' && typeof tf[3] === 'number') {
-		  return 'cubic-bezier(' + tf[0] + ', ' + tf[1] + ', ' + tf[2] + ', ' + tf[3] + ')';
+		  return `cubic-bezier(${tf[0]}, ${tf[1]}, ${tf[2]}, ${tf[3]})`;
   
 		} else {
 		  console.warn('Bad input: expected numbers');
@@ -324,23 +324,29 @@
 	}
   
 	function removeClass (cssClasses, cssClass) {
-	  var rxp = new RegExp(cssClass + '\\s*', 'gi');
+	  var rxp = new RegExp(`${cssClass}\\s*`, 'gi');
 	  return cssClasses.replace(rxp, '').replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
 	}
 	
 	function rebounce (func) {
-	  var scheduled, context, args, i, j;
+	  var scheduled;
+	  var context;
+	  var args;
+	  var i;
+	  var j;
 	  return function () {
 		context = this;
 		args = [];
+		// rome-ignore lint:
 		i = arguments.length;
 		j = 0;
   
 		for (; j < i; ++j) {
+		  // rome-ignore lint:
 		  args[j] = arguments[j];
 		}
   
-		if (!!scheduled) {
+		if (scheduled) {
 		  win.cancelAnimationFrame(scheduled);
 		}
   
