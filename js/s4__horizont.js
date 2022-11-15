@@ -42,8 +42,8 @@ window.addEventListener('resize', function(event) {
 	sections.forEach((sct, i) => {
 		ScrollTrigger.create({
 			trigger: sct,
-			start: () => 'top top-=' + (sct.offsetLeft - window.innerWidth/2) * (maxWidth / (maxWidth - window.innerWidth)),
-			end: () => '+=' + sct.offsetWidth * (maxWidth / (maxWidth - window.innerWidth)),
+			start: () => `top top-=${(sct.offsetLeft - window.innerWidth/2) * (maxWidth / (maxWidth - window.innerWidth))}`,
+			end: () => `+=${sct.offsetWidth * (maxWidth / (maxWidth - window.innerWidth))}`,
 			toggleClass: {targets: sct, className: "active"}
 		});
 	});

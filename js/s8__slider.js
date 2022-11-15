@@ -20,7 +20,7 @@ var timer = gsap.delayedCall(slideDelay, autoPlay);
 
 var animation = gsap.to(slides, {
 	duration: 1, 
-	xPercent: "+=" + (numSlides * 100),
+	xPercent: `+=${(numSlides * 100)}`,
 	ease: "none",
 	paused: true,
 	repeat: -1,
