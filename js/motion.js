@@ -292,3 +292,53 @@ disableScroll();
 function enableScroll2() {
 	enableScroll();
 }
+
+
+
+
+
+
+// const slideImage = document.querySelectorAll(".slide-img");
+// const slidesContainer = document.querySelector(".slides-container");
+
+// let numberOfImages = slideImage.length;
+// let slideWidth = slideImage[0].clientWidth;
+// let currentSlide = 0;
+
+// function goToSlide(slideNumber) {
+//     slidesContainer.style.transform = `translateX(-${slideWidth * slideNumber}px)`;
+//     currentSlide = slideNumber;
+
+//     // animate(
+//     //     ".slidesContainer",
+//     //     { transform: `translateX(-${slideWidth * slideNumber}px)` },
+//     //     { duration: 0.5 }
+//     //   )
+// }
+
+
+// function automateSlider() {
+
+//     let slideNumber = currentSlide;
+
+//     setInterval(() => {
+
+//         slideNumber++;
+
+//         if (slideNumber > numberOfImages - 1) {slideNumber = 0;}
+
+//         goToSlide(slideNumber);
+
+//     }, 3000);
+
+// }
+
+
+// automateSlider();
+
+
+// window.onresize = function () {
+//     slideWidth = slideImage[0].clientWidth;
+//     slidesContainer.style.transform = `translateX(-${slideWidth * currentSlide}px)`;
+//     console.log(slideWidth);
+// }

@@ -261,7 +261,6 @@
 	<link rel="stylesheet" href="minified/mobile.style.min.css">
 	<link rel="stylesheet" href="minified/desktop.style.min.css" media="screen and (min-width: 700px)">
 
-	<!-- <script defer src="minified/squircle.min.js"></script> закругления супперэллипсов -->
 	<script>
 		if (CSS && 'paintWorklet' in CSS) CSS.paintWorklet.addModule("./minified/squircle.min.js");
 	</script>
@@ -270,10 +269,7 @@
 	<script defer src="minified/motion.min.js"></script> <!-- анимация скрытия прелоадера и смена цвета фона -->
 
 	<script defer src="minified/s4__horizont.min.js"></script> <!-- GSAP S4 горизонтальный скролл -->
-	<script defer src="minified/Draggable.min.js"></script> <!-- GSAP S8 драггинг для слайдера -->
-	<script defer src="minified/InertiaPlugin.min.js"></script> <!-- GSAP S8 инерция для слайдера -->
-	<script defer src="minified/s8__slider.min.js"></script> <!-- GSAP S8 анимация для слайдера -->
-
+	<script defer src="minified/s8.min.js"></script> <!-- motion one S8 анимация для слайдера -->
 
 </head>
 
@@ -299,10 +295,10 @@
 	<main>
 		<section class="s1">
 			<header class="header">
-				<div class="header__left">
+				<nav class="header__left">
 					<a class="header__left--link" href="#originals">KION Originals</a>
 					<a class="header__left--link" href="#subscription">Подписка</a>
-				</div>
+				</nav>
 
 				<svg class="header__logo" height="100%" width="100%" viewBox="0 0 210 52" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<title>Логотип KION</title>
@@ -320,10 +316,10 @@
 						fill="white" stroke="white" class="svg-head-4"></path>
 				</svg>
 
-				<div class="header__right">
+				<nav class="header__right">
 					<a class="header__right--link" href="#kiontop">KION TOP</a>
 					<a class="header__right--link" href="#faq">FAQ</a>
-				</div>
+				</nav>
 
 			</header>
 
@@ -1179,7 +1175,7 @@
 
 		</section>
 
-
+<!-- 
 		<section class="s8">
 			<h3 class="s8__screenreader">Слайдер KION TOP</h3>
 			<div class="s8__wrapper slides-container">
@@ -1196,8 +1192,22 @@
 				</div>
 			</div>
 		</section>
-
-
+ -->
+		<section class="s8">
+			<div class="s8__wrapper wrapper">	
+				<div class="slides-container">
+					<div class="slide slide-img slide1">
+						<img class="s8__logo1" decoding="async" loading="lazy" src="./media/start.svg" alt="Лого онлайн-кинотеатра Старт">
+					</div>
+					<div class="slide slide-img slide2">
+						<img class="s8__logo2" decoding="async" loading="lazy" src="./media/amediateka.svg" alt="Лого онлайн-кинотеатра Амедиатека">
+					</div>
+					<div class="slide slide-img slide3">
+						<img class="s8__logo3" decoding="async" loading="lazy" src="./media/ivi_lite.png" alt="Лого онлайн-кинотеатра Иви">
+					</div>
+				</div>
+			</div>
+		</section>
 	</main>
 
 	<footer class="footer">
@@ -1234,29 +1244,24 @@
 			</details>
 		</section>
 		
-		<div class="footer-container">
-			<div class="footer__left">
-				<a class="footer__left--link" href="#originals">KION Originals</a>
-				<a class="footer__left--link" href="#subscription">Подписка</a>
-			</div>
+		<nav class="footer-container">
+			<ul class="footer__left">
+				<li><a class="footer__left--link" href="#originals">KION Originals</a></li>
+				<li><a class="footer__left--link" href="#subscription">Подписка</a></li>
+			</ul>
 	
 			<a class="footer__logo" href=""><img decoding="async" src="./media/kionmts.svg" alt="Лого Кион"></a>
 	
-			<div class="footer__right">
-				<a class="footer__right--link" href="#kiontop">KION TOP</a>
-				<a class="footer__right--link" href="#faq">FAQ</a>
-			</div>
-		</div>
+			<ul class="footer__right">
+				<li><a class="footer__right--link" href="#kiontop">KION TOP</a></li>
+				<li><a class="footer__right--link" href="#faq">FAQ</a></li>
+			</ul>
+		</nav>
 
 	</footer>
 
-	<!-- <focus-zoom></focus-zoom> -->
+	<script defer src="minified/faq.min.js"></script> <!-- WAAPI анимация для FAQ -->
+	<script defer src="minified/gradient.min.js"></script> <!-- градиент футер -->
 </body>
-<script defer src="minified/faq.min.js"></script> <!-- WAAPI анимация для FAQ -->
-	
-<script defer src="minified/gradient.min.js"></script> <!-- градиент футер -->
-<!-- <script defer src="minified/zoomAnimation.min.js"></script> анимация зума при клике на альт -->
-
-
 
 </html>
