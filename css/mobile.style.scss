@@ -1296,6 +1296,8 @@ _::-webkit-full-page-media, _:future, :root .overlay2 svg {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 // .slide-img img {
