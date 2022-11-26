@@ -1,5 +1,7 @@
 import { animate } from "motion";
 import { scrollTimeline } from "./scrollTimeline.js";
+import "./s8.js"; // анимация слайдера
+
 
 // first screen animation
 animate(
@@ -342,3 +344,5 @@ function enableScroll2() {
 //     slidesContainer.style.transform = `translateX(-${slideWidth * currentSlide}px)`;
 //     console.log(slideWidth);
 // }
+
+

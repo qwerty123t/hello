@@ -3,15 +3,15 @@ import { animate } from "motion"
 const slideImage = document.querySelectorAll(".slide-img");
 const slidesContainer = document.querySelector(".slides-container");
 
-let numberOfImages = slideImage.length;
 let slideWidth = slideImage[0].clientWidth;
-let screenSize = window.screen.availWidth;
+let screenSize = window.innerWidth;
 let slideWidthVW = slideWidth / screenSize * 100;
+
 let currentSlide = 0;
+let numberOfImages = slideImage.length;
 
 
 function goToSlide(slideNumber) {
-    // slidesContainer.style.transform = `translateX(-${slideWidth * slideNumber}px)`;
     currentSlide = slideNumber;
 
     animate(
