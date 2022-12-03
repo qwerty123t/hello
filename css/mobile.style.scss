@@ -1,17 +1,20 @@
 @font-face {
 	font-weight: 700; /* bold */
 	font-family: 'Hero New';
-	src: url('../fonts/Hero-New-Bold-subset.woff2');
+	font-display: fallback;
+	src: local('Hero New Bold'), url('../fonts/Hero-New-Bold-subset.woff2');
 }
 @font-face {
 	font-weight: 500; /* medium */
 	font-family: 'Hero New';
-	src: url('../fonts/Hero-New-Medium-subset.woff2');
+	font-display: fallback;
+	src: local('Hero New Medium'), url('../fonts/Hero-New-Medium-subset.woff2');
 }
 @font-face {
 	font-weight: 400; /* regular / normal */
 	font-family: 'Hero New';
-	src: url('../fonts/Hero-New-Regular-subset.woff2');
+	font-display: fallback;
+	src: local('Hero New Regular'), local('Hero New'), url('../fonts/Hero-New-Regular-subset.woff2');
 }
 
 :root {
