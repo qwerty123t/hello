@@ -271,6 +271,7 @@
 		// height: 160vw; /* 512px */
 		height: calc(100vh - 24vw);
 		height: calc(100svh - 24vw);
+		max-height: 160vw;
 		width: 87.5vw;
 		margin: 0 auto;
 		background-color: black;
@@ -278,7 +279,6 @@
 		will-change: transform;
 		--smooth-corners: 9, 19;
 		mask-image: paint(smooth-corners);
-		-webkit-mask-image: paint(smooth-corners);
 	}
 
 

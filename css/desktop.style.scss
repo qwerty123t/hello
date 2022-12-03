@@ -130,6 +130,8 @@ https://learnui.design/tools/gradient-generator.html
 		&__wrapper {
 			width: 89.453125vw;
 			height: calc(100vh - 8vw);
+			min-height: 50.31738281vw;
+			max-height: 60vw;
 			border-radius: 3.25520833vw;
 			--smooth-corners: 25, 15;
 		}
