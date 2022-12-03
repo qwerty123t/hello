@@ -293,10 +293,9 @@ https://learnui.design/tools/gradient-generator.html
 		.marquee {
 			margin-top: 5.33854167vw; /* 164px */
 			height: 27.8645833vw; /* 856px */
-		  }
+		}
 
 		&__images {
-			
 			// margin-left: 12.9231771vw; /* 397px */
 			// width: 89.453125vw; /* 2748px */
 			width: 381.25vw;
@@ -307,6 +306,10 @@ https://learnui.design/tools/gradient-generator.html
 				border-radius: 0.651041667vw; /* 20px */
 				object-fit: none;
 				--squircle-radius: 20px;
+
+				img {
+					border-radius: 0.651041667vw; /* 20px */
+				}
 			}
 			&--image5 {
 				object-position: center 90%;
@@ -316,9 +319,9 @@ https://learnui.design/tools/gradient-generator.html
 			}
 	
 			&--column {
-
 				.s3__images--image {
-					height: 12.7604167vw; /* 392px */
+					height: 12.7604167vw; /* 392px */	
+					border-radius: 0.651041667vw; /* 20px */
 				}
 			}
 		}
