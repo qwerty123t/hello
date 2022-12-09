@@ -20,11 +20,12 @@
 :root {
 	background: #010516;
 	font-family: 'Hero New', system-ui, sans-serif;
-	scroll-behavior: smooth;
 	-webkit-tap-highlight-color: transparent;  
 	scrollbar-color: hsl(331deg 100% 47%) transparent;
 	scrollbar-width: thin;
+	scroll-behavior: smooth;
 }
+
 ::selection {
 	background-color: #f06;
 	color: white;
@@ -893,7 +894,7 @@ _::-webkit-full-page-media, _:future, :root .overlay2 svg {
 }
 
 .s4 {
-	height: calc(100vw + 100vw + 100vw + 100vw + 100vh);
+	height: calc(400vw + 100vh);
 	overflow: hidden;
 	background-color: #010516;
 
