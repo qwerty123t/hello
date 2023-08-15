@@ -19,8 +19,8 @@
   "homepage": "https://github.com/ronokiri2/hello#readme",
   "dependencies": {
     "granim": "^2.0.0",
-    "gsap": "^3.11.3",
-    "motion": "^10.14.3",
+    "gsap": "^3.12.2",
+    "motion": "^10.16.2",
     "parallax-js": "^3.1.0",
     "postcss": "8.4.19",
     "smooth-corners": "^1.0.8"
