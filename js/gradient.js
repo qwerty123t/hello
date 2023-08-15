@@ -1,6 +1,6 @@
 import Granim from "granim";
 
-var granimInstance = new Granim({
+const granimInstance = new Granim({
 	element: ".canvas",
 	direction: "custom",
 	customDirection: {

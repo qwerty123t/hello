@@ -3,12 +3,12 @@ import { animate } from "motion"
 const slideImage = document.querySelectorAll(".slide-img");
 const slidesContainer = document.querySelector(".slides-container");
 
-let slideWidth = slideImage[0].clientWidth;
-let screenSize = window.innerWidth;
-let slideWidthVW = slideWidth / screenSize * 100;
+const slideWidth = slideImage[0].clientWidth;
+const screenSize = window.innerWidth;
+const slideWidthVW = slideWidth / screenSize * 100;
 
 let currentSlide = 0;
-let numberOfImages = slideImage.length;
+const numberOfImages = slideImage.length;
 
 
 function goToSlide(slideNumber) {

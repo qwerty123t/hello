@@ -1,66 +1,65 @@
 import Parallax from 'parallax-js'
 
-
 // Elements
-var scene1 = document.getElementById('scene1'); 
-var scene2 = document.getElementById('scene2');
-var scene3 = document.getElementById('scene3');  
-var scene4 = document.getElementById('scene4');
-var scene5 = document.getElementById('scene5');  
-var scene6 = document.getElementById('scene6');
-var scene7 = document.getElementById('scene7');  
-var scene8 = document.getElementById('scene8');
-var scene9 = document.getElementById('scene9'); 
-var scene10 = document.getElementById('scene10'); 
+const scene1 = document.getElementById('scene1'); 
+const scene2 = document.getElementById('scene2');
+const scene3 = document.getElementById('scene3');  
+const scene4 = document.getElementById('scene4');
+const scene5 = document.getElementById('scene5');  
+const scene6 = document.getElementById('scene6');
+const scene7 = document.getElementById('scene7');  
+const scene8 = document.getElementById('scene8');
+const scene9 = document.getElementById('scene9'); 
+const scene10 = document.getElementById('scene10'); 
 
 
 
-var parallax = new Parallax(scene1, {
+const parallax1 = new Parallax(scene1, {
 	hoverOnly: true,
 	frictionX: 0.3,
 	frictionY: 0.3,
 });
-var parallax = new Parallax(scene2, {
+const parallax2 = new Parallax(scene2, {
 	hoverOnly: true,
 	frictionX: 0.3,
 	frictionY: 0.3,
 });
-var parallax = new Parallax(scene3, {
+const parallax3 = new Parallax(scene3, {
 	hoverOnly: true,
 	frictionX: 0.3,
 	frictionY: 0.3,
 });
-var parallax = new Parallax(scene4, {
+const parallax4 = new Parallax(scene4, {
 	hoverOnly: true,
 	frictionX: 0.3,
 	frictionY: 0.3,
 });
-var parallax = new Parallax(scene5, {
+const parallax5 = new Parallax(scene5, {
 	hoverOnly: true,
 	frictionX: 0.3,
 	frictionY: 0.3,
 });
-var parallax = new Parallax(scene6, {
+const parallax6 = new Parallax(scene6, {
 	hoverOnly: true,
 	frictionX: 0.3,
 	frictionY: 0.3,
 });
-var parallax = new Parallax(scene7, {
+const parallax7 = new Parallax(scene7, {
 	hoverOnly: true,
 	frictionX: 0.3,
 	frictionY: 0.3,
 });
-var parallax = new Parallax(scene8, {
+const parallax8 = new Parallax(scene8, {
 	hoverOnly: true,
 	frictionX: 0.3,
 	frictionY: 0.3,
 });
-var parallax = new Parallax(scene9, {
+const parallax9 = new Parallax(scene9, {
 	hoverOnly: true,
 	frictionX: 0.3,
 	frictionY: 0.3,
 });
-var parallax = new Parallax(scene10, {
+const parallax10 = new Parallax(scene10, {
 	hoverOnly: true,
 	frictionX: 0.3,
 	frictionY: 0.3,
