@@ -313,6 +313,7 @@
 		text-transform: uppercase;
 		letter-spacing: 0.07em;
 		margin-bottom: 3.125vw;
+		text-align: center;
 	}
 
 	&__h2 {
@@ -322,6 +323,7 @@
 		font-weight: 400;
 		line-height: 6.25vw; /* 20px */
 		text-align: center;
+		text-wrap: balance;
 	}
 	&__button {
 		display: flex;
@@ -330,7 +332,7 @@
 		z-index: 1;
 		color: white;
 		margin-top: 7.8125vw;
-		width: 71.875vw; /* 230px */
+		width: 60vw;
 		height: 13.125vw; /* 42px */
 		font-weight: 400;
 		font-size: 4.375vw; /* 14px */
@@ -1103,25 +1105,20 @@ _::-webkit-full-page-media, _:future, :root .overlay2 svg {
 
 }
 
-
-
 .s7 {
-    transition : all 0.6s ease;
+    transition : background-color 0.6s ease;
 	background-color: #010516;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 21.875vw 0;
 
-	&__wrapper {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-
-	&__logo {
+	&__tv {
 		width: 65vw;
-		margin-top: 21.875vw;
 	}
 
 	&__header {
-		transition : all 0.6s ease;
+		transition : color 0.6s ease;
 		width: 87.5vw; /* 280px */
 		font-weight: 700;
 		font-size: 7.5vw; /* 24px */
@@ -1129,10 +1126,11 @@ _::-webkit-full-page-media, _:future, :root .overlay2 svg {
 		text-align: center;
 		color: white;
 		margin: 8.75vw auto 0 auto; /* 63px */
+		text-wrap: balance;
 	}
 
 	&__text {
-		transition : all 0.6s ease;
+		transition : color 0.6s ease;
 		width: 87.5vw; /* 280px */
 		font-weight: 400; /* normal */
 		font-size: 4.375vw; /* 14px */
@@ -1140,6 +1138,7 @@ _::-webkit-full-page-media, _:future, :root .overlay2 svg {
 		text-align: center;
 		color: white;
 		margin: 8.75vw auto 0 auto; /* 28px */
+		text-wrap: balance;
 	}
 
 	&__button {
@@ -1173,84 +1172,6 @@ _::-webkit-full-page-media, _:future, :root .overlay2 svg {
 	}
 
 }
-
-
-
-.s8 {
-    transition : all 0.6s ease;
-	background-color: #010516;
-	padding-top: 22.1875vw;
-	padding-bottom: 21.875vw;
-
-	// скрытие лейбла визуально, скринридеры смогут прочитать
-	&__screenreader {
-		border: 0;
-		clip: rect(0px, 0px, 0px, 0);
-		height: 1px;
-		margin: -1px;
-		overflow: hidden;
-		padding: 0;
-		position: absolute;
-		width: 1px;
-	}
-
-	&__logo1 {
-		width: 46.5625vw;
-		transform: translateX(-6.25vw);
-	}
-
-	&__logo2 {
-		width: 70vw;
-		transform: translateX(-6.25vw);
-	}
-
-	&__logo3 {
-		width: 30vw;
-		transform: translateX(-6.25vw);
-	}
-}
-
-.wrapper {
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-	display: flex;
-	background-color: darkgrey;
-	width: 87.5vw;
-	height: min(70vh, 160vw);
-	margin: 0 auto;
-	border-radius: 12.5vw;
-	mask-image: radial-gradient(white, black);
-}
-
-.slides-container {
-    height: 100%;
-	display: flex;
-	width: 300vw;
-	will-change: transform;
-}
-
-.slide-img {
-    height: 100%;
-    width: 100vw;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-
-.slide1 {
-	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../media/start.jpeg);
-}
-
-.slide2 {
-	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../media/amediateka.jpeg);
-}
-
-.slide3 {
-	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../media/ivi.jpeg);
-}	
 
 
 .footer {

@@ -2,80 +2,69 @@
     The new CSS reset - version 1.7.3 (last updated 7.8.2022)
     GitHub page: https://github.com/elad2412/the-new-css-reset
 ***/
+
 /*
     Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
     - The "symbol *" part is to solve Firefox SVG sprite bug
  */
-*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
-  all: unset;
-  display: revert;
+ *:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+    all: unset;
+    display: revert;
 }
 
 /* Preferred box-sizing value */
 *,
 *::before,
 *::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+	padding: 0;
 }
 
 /* Reapply the pointer cursor for anchor tags */
 a, button {
-  cursor: revert;
+    cursor: revert;
 }
 
 /* Remove list styles (bullets/numbers) */
 ol, ul, menu {
-  list-style: none;
+    list-style: none;
 }
 
 /* For images to not be able to exceed their container */
 img {
-  max-width: 100%;
+    max-width: 100%;
 }
 
+
 /* reset default text opacity of input placeholder */
-::-webkit-input-placeholder {
-  color: unset;
-}
-::-moz-placeholder {
-  color: unset;
-}
-:-ms-input-placeholder {
-  color: unset;
-}
-::-ms-input-placeholder {
-  color: unset;
-}
 ::placeholder {
-  color: unset;
+    color: unset;
 }
 
 /* fix the feature of 'hidden' attribute.
    display:revert; revert to element instead of attribute */
 :where([hidden]) {
-  display: none;
+    display: none;
 }
 
+
 /* apply back the draggable feature - exist only in Chromium and Safari */
-:where([draggable=true]) {
-  -webkit-user-drag: element;
+:where([draggable="true"]) {
+    -webkit-user-drag: element;
 }
+
+
 
 /* Remove all animations and transitions for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-    scroll-behavior: auto;
+    html:focus-within {
+     scroll-behavior: auto;
+    }
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
-  * {
-    -webkit-animation-duration: 0.01ms !important;
-            animation-duration: 0.01ms !important;
-    -webkit-animation-iteration-count: 1 !important;
-            animation-iteration-count: 1 !important;
-    -webkit-transition-duration: 0.01ms !important;
-            transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
