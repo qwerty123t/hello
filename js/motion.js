@@ -1,7 +1,6 @@
-import { animate } from "motion";
+import { animate, scroll } from "motion";
 import { scrollTimeline } from "./scrollTimeline.js";
 
-// first screen animation
 animate(
 	".preloader",
 	{
@@ -37,9 +36,7 @@ animate(
 	},
 );
 
-// для смартфонов наверное нужно будет создать еще таймлайн
 
-// timelines
 const s2Logo = new ScrollTimeline({
 	source: document.documentElement,
 	scrollSource: document.documentElement, // For legacy implementations
@@ -93,65 +90,76 @@ const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 // 700+ PX
 if (window.matchMedia("(min-width: 700px)").matches) {
 	if (isSafari === true) {
-		document.querySelector(".overlay2").animate(
-			{
-				transform: ["scale(0.2)", "scale(16)"],
-			},
-			{
-				duration: 1,
-				fill: "forwards",
-				timeline: s2Logo,
-				easing: "cubic-bezier(.86,.09,.83,.67)",
-			},
+		// document.querySelector(".overlay2").animate(
+		// 	{
+		// 		transform: ["scale(0.2)", "scale(16)"],
+		// 	},
+		// 	{
+		// 		duration: 1,
+		// 		fill: "forwards",
+		// 		timeline: s2Logo,
+		// 		easing: "cubic-bezier(.86,.09,.83,.67)",
+		// 	},
+		// );
+
+		scroll(
+			animate(
+				document.querySelector(".overlay2"), 
+				{ 
+					transform: ["scale(0.2)", "scale(16)"], 
+				}), 
+				{
+					target: document.querySelector(".s2"),
+					offset: ["start start", "0.3 start"]
+				}
 		);
 	} else {
-		document.querySelector(".overlay2").animate(
-			{
-				transform: ["scale(1)", "scale(80)"],
-			},
-			{
-				duration: 1,
-				fill: "forwards",
-				timeline: s2Logo,
-				easing: "cubic-bezier(.86,.09,.83,.67)",
-			},
+		scroll(
+			animate(
+				document.querySelector(".overlay2"), 
+				{ 
+					transform: ["scale(1)", "scale(80)"], 
+				}), 
+				{
+					target: document.querySelector(".s2"),
+					offset: ["start start", "0.3 start"]
+				}
 		);
 	}
-
-	document.querySelector(".s2__bg").animate(
-		{
-			opacity: [1, 0],
-		},
-		{
-			duration: 1,
-			fill: "forwards",
-			timeline: s2BgColor,
-			easing: "linear",
-		},
+	scroll(
+		animate(
+			document.querySelector(".s2__bg"), 
+			{ 
+				opacity: [1, 0],
+			}), 
+			{
+				target: document.querySelector(".s2"),
+				offset: ["start start", "0.2 start"]
+			}
 	);
-
-	// <700 PX
 } else {
-	document.querySelector(".overlay2").animate(
-		{
-			transform: ["scale(1)", "scale(80)"],
-		},
-		{
-			duration: 1,
-			fill: "forwards",
-			timeline: s2Logo,
-			easing: "cubic-bezier(.86,.09,.83,.67)",
-		},
+	// <700 PX
+	scroll(
+		animate(
+			document.querySelector(".overlay2"), 
+			{ 
+				transform: ["scale(1)", "scale(80)"], 
+			}), 
+			{
+				target: document.querySelector(".s2"),
+				offset: ["start start", "0.1 start"]
+			}
 	);
-
-	document.querySelector(".s2__bg").animate(
-		{
-			opacity: [1, 0],
-		},
-		{
-			fill: "forwards",
-			timeline: s2BgColorMobile,
-		},
+	scroll(
+		animate(
+			document.querySelector(".s2__bg"), 
+			{ 
+				opacity: [1, 0],
+			}), 
+			{
+				target: document.querySelector(".s2"),
+				offset: ["start start", "0.1 start"]
+			}
 	);
 }
 
