@@ -157,6 +157,7 @@ https://learnui.design/tools/gradient-generator.html
 			font-size: 1.953125vw;
 			line-height: 140%;
 			margin-bottom: 3.58072917vw;
+			width: 60vw;
 		}
 		&__button {
 			width: 16vw;
@@ -223,8 +224,7 @@ https://learnui.design/tools/gradient-generator.html
 				margin-top: 2.47395833vw; /* 76px */
 				font-size: 1.62760417vw; /* 50px */
 				line-height: 2.60416667vw; /* 80px */
-				width: 71.3541667vw; /* 2192px */
-				width: 60ch;
+				width: 60vw; /* 2192px */
 			}
 		}
 		
@@ -440,9 +440,8 @@ https://learnui.design/tools/gradient-generator.html
 
 	.s7 {
 
-		&__logo {
-			margin-top: 15.2669271vw;
-			width: 30.2734375vw;
+		&__tv {
+			width: 40vw;
 		}
 
 		&__header {

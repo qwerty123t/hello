@@ -37,6 +37,10 @@
 .black {
 	color: black !important;
 }
+
+.overflow-hidden {
+	overflow: hidden;
+}
 .header {
 	display: flex;
 	justify-content: space-around;
@@ -324,6 +328,7 @@
 		line-height: 6.25vw; /* 20px */
 		text-align: center;
 		text-wrap: balance;
+		max-width: 75ch;
 	}
 	&__button {
 		display: flex;
@@ -552,16 +557,10 @@
 		justify-content: flex-end;
 	}
 	
-
-
-
 	&__benefit--image1 {
 		width: 22.5vw; /* 72px */
 	}
 
-
-  
-  
 	&__benefit--image2 {
 		width: 22.8125vw; /* 73px */
 
@@ -719,7 +718,6 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-	
 
 		&--logo {
 			margin-top: 24.6875vw; /* 79px */
@@ -735,6 +733,7 @@
 			font-size: 4.375vw; /* 14px */
 			line-height: 6.25vw; /* 20px */
 			z-index: 1;
+			max-width: 60ch;
 		}
 	}
 
@@ -827,6 +826,7 @@ _::-webkit-full-page-media, _:future, :root .overlay2 svg {
 		text-align: center;
 		color: white;
 		margin: 0 auto;
+		max-width: 75ch;
 	}
 
 	&__text {
@@ -837,6 +837,7 @@ _::-webkit-full-page-media, _:future, :root .overlay2 svg {
 		text-align: center;
 		color: white;
 		margin: 8.75vw auto 0 auto; /* 28px */
+		max-width: 50ch;
 	}
 
 
@@ -980,6 +981,7 @@ _::-webkit-full-page-media, _:future, :root .overlay2 svg {
 		text-align: center;
 		color: white;
 		margin: 19.6875vw auto 0 auto; /* 63px */
+		max-width: 75ch;
 	}
 
 	&__text {
@@ -990,6 +992,7 @@ _::-webkit-full-page-media, _:future, :root .overlay2 svg {
 		text-align: center;
 		color: white;
 		margin: 8.75vw auto 0 auto; /* 28px */
+		max-width: 75ch;
 	}
 
 	&__image {
@@ -1091,6 +1094,7 @@ _::-webkit-full-page-media, _:future, :root .overlay2 svg {
 		text-align: center;
 		color: white;
 		margin: 19.6875vw auto 0 auto; /* 63px */
+		max-width: 75ch;
 	}
 
 	&__text {
@@ -1101,6 +1105,7 @@ _::-webkit-full-page-media, _:future, :root .overlay2 svg {
 		text-align: center;
 		color: white;
 		margin: 8.75vw auto 0 auto; /* 28px */
+		max-width: 50ch;
 	}
 
 }
@@ -1114,7 +1119,7 @@ _::-webkit-full-page-media, _:future, :root .overlay2 svg {
 	padding: 21.875vw 0;
 
 	&__tv {
-		width: 65vw;
+		width: 50vw;
 	}
 
 	&__header {
@@ -1127,6 +1132,7 @@ _::-webkit-full-page-media, _:future, :root .overlay2 svg {
 		color: white;
 		margin: 8.75vw auto 0 auto; /* 63px */
 		text-wrap: balance;
+		max-width: 75ch;
 	}
 
 	&__text {
@@ -1139,6 +1145,7 @@ _::-webkit-full-page-media, _:future, :root .overlay2 svg {
 		color: white;
 		margin: 8.75vw auto 0 auto; /* 28px */
 		text-wrap: balance;
+		max-width: 75ch;
 	}
 
 	&__button {
