@@ -1,6 +1,5 @@
 import Parallax from 'parallax-js'
 
-// Elements
 const scene1 = document.getElementById('scene1'); 
 const scene2 = document.getElementById('scene2');
 const scene3 = document.getElementById('scene3');  
@@ -69,25 +68,21 @@ if (window.matchMedia("(min-width: 700px)").matches) {
 	pivot.init({
 		selector: '#scene1',
 		scale: true,
-		//   shine: true,
 		perspective: 1500,
 	})
 	pivot.init({
 		selector: '#scene2',
 		scale: true,
-		// shine: true,
 		perspective: 1500,
 	})
 	pivot.init({
 		selector: '#scene3',
 		scale: true,
-		// shine: true,
 		perspective: 1500,
 	})
 	pivot.init({
 		selector: '#scene4',
 		scale: true,
-		// shine: true,
 		perspective: 1500,
 	})
 	pivot.init({
@@ -120,19 +115,4 @@ if (window.matchMedia("(min-width: 700px)").matches) {
 		scale: true,
 		perspective: 1500,
 	})
-	//   pivot.init({
-	// 	  selector: '#scene7',
-	// 	  scale: true,
-	// 	  shine: true,
-	//   })
-	//   pivot.init({
-	// 	  selector: '#scene8',
-	// 	  scale: true,
-	// 	  shine: true,
-	//   })
-	//   pivot.init({
-	// 	  selector: '#scene9',
-	// 	  scale: true,
-	// 	  shine: true,
-	//   })
 } 

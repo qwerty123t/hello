@@ -161,15 +161,11 @@
 	<link rel="preload" href="fonts/Hero-New-Regular-subset.woff2" as="font" type="font/woff2" crossorigin>
 
 	<link rel="stylesheet" href="minified/all.css">
+	<script defer src="minified/index.js"></script>
 
-	<script>
+	<script defer>
 		if (CSS && 'paintWorklet' in CSS) CSS.paintWorklet.addModule("./minified/squircle.min.js");
 	</script>
-	<script defer src="minified/pivot.min.js"></script> <!-- Библиотнека наклонов постеров -->
-	<script defer src="minified/s27__3dPosters.min.js"></script> <!-- 3д парраллакс постеры -->
-	<script defer src="minified/motion.min.js"></script> <!-- анимация скрытия прелоадера, смена цвета фона и слайдер s8 -->
-
-	<script defer src="minified/s4__horizont.min.js"></script> <!-- GSAP S4 горизонтальный скролл -->
 
 </head>
 
@@ -1075,8 +1071,6 @@
 
 	</footer>
 
-	<script defer src="minified/faq.min.js"></script> <!-- WAAPI анимация для FAQ -->
-	<script defer src="minified/gradient.min.js"></script> <!-- градиент футер -->
 </body>
 
 </html>
